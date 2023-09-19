@@ -23,7 +23,7 @@ function Header() {
                     alignItems="center"
                     spacing="16px">
                     <img src={logo} alt="logo" />
-                    <Nav align="Horizontal"/>
+                    <Nav align="Horizontal" spacing={6}/>
                 </HStack>
             </Box>
         </Box>

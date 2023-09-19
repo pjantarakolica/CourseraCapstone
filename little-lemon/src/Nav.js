@@ -21,7 +21,11 @@ function Nav(props){
         <nav>
             <FormatNav {...props}>
                 <ChakraLink as={ReactRouterLink} to="/">Homepage</ChakraLink>
+                <ChakraLink href="#">About</ChakraLink>
+                <ChakraLink href="#">Menu</ChakraLink>
                 <ChakraLink as={ReactRouterLink} to="/booking">Reservations</ChakraLink>
+                <ChakraLink href="#">Order Online</ChakraLink>
+                <ChakraLink href="#">Login</ChakraLink>
             </FormatNav>
         </nav>
     )
