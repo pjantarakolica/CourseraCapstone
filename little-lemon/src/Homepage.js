@@ -1,12 +1,8 @@
-import { Box, HStack } from "@chakra-ui/react";
+import Hero from "./Components/Hero"
+
 function Homepage(){
     return(
-        <Box
-      backgroundColor="#495e57">
-        <div>
-            Homepage
-        </div>
-      </Box>
+        <Hero />
     )
 }
 

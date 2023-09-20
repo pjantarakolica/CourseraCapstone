@@ -1,16 +1,18 @@
 
 import './App.css';
+import theme from './Components/theme'
 import Header from "./Header"
 import Homepage from "./Homepage";
 import Booking from "./Booking";
+import Footer from "./Footer";
 
 import { ChakraProvider } from '@chakra-ui/react';
-import { Box, HStack, VStack } from "@chakra-ui/react";
-import { Routes, Route, Link} from "react-router-dom";
+import { Box } from "@chakra-ui/react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <main>
         <Header />
         <Box height={16} />
@@ -20,6 +22,7 @@ function App() {
         <Route path="/booking" element={<Booking />}></Route>
       </Routes>
       </>
+      <Footer />
       </main>
     </ChakraProvider>
   );
