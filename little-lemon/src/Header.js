@@ -1,5 +1,5 @@
 import logo from "./Assets/Logo.svg";
-import Nav from "./Nav";
+import Nav from "./Components/Nav";
 import { Box, HStack } from "@chakra-ui/react";
 
 function Header() {
