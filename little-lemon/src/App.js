@@ -15,7 +15,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <main>
         <Header />
-        <Box height={16} />
+        <Box height={16} bgColor="#495E57"/>
       <>
       <Routes>
         <Route path="/" element={<Homepage />}></Route>

@@ -1,8 +1,8 @@
 import logo from "./Assets/Logo.svg";
 import Nav from "./Components/Nav";
+
 import { Box, HStack, Stack, Heading, Image, Text,Center} from "@chakra-ui/react";
 import { PhoneIcon, EmailIcon , LinkIcon} from '@chakra-ui/icons'
-
 import { Link as ChakraLink} from '@chakra-ui/react'
 
 function Footer(){
@@ -17,9 +17,9 @@ function Footer(){
                     justifyContent="space-between"
                     alignItems="top"
                     spacing={16}>
+                        <Image src={logo} alt="logo" />
                         <Stack py={16}>
-                            <Image src={logo} alt="logo" />
-                            <Nav align="Vertical" spacing={0} color="#edefee"/>
+                            <Nav align="Vertical" spacing={0} color="#edefee" alignItems="normal"/>
                         </Stack>
                         <Stack py={16} color="#fbdabb">
                             <Heading as='h2' size='lg' color="#f4ce14">Contact Us</Heading>
@@ -29,7 +29,7 @@ function Footer(){
                         <Stack py={16} color="#fbdabb">
                             <Heading as='h2' size='lg' color="#f4ce14">Social Media</Heading>
                             <ChakraLink href="#"><LinkIcon/> Facebook</ChakraLink>
-                            <ChakraLink href="#"><LinkIcon/>Twitter</ChakraLink>
+                            <ChakraLink href="#"><LinkIcon/> Twitter</ChakraLink>
                         </Stack>
                 </HStack>
                 </Box>
