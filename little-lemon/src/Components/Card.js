@@ -1,5 +1,4 @@
 import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 import dishicon from "../Assets/DishIcon.svg"
 import { Link as ChakraLink } from '@chakra-ui/react'
 
