@@ -4,8 +4,11 @@ import { NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepp
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 
+import { useNavigate } from "react-router-dom";
+
 
 function BookingForm(props) {
+    const navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
             resDate: '',
@@ -14,7 +17,8 @@ function BookingForm(props) {
             guests: 1,
         },
         onSubmit: (values) => {
-
+            props.submission(values);
+            navigate('/confirmed-booking');
         },
         validationSchema: Yup.object({
             resDate: Yup.date().min(new Date(), 'The date must be in the future.').required("Required"),
@@ -22,6 +26,7 @@ function BookingForm(props) {
             guests: Yup.number().min(1).max(10).required("Required"),
         }),
     });
+
 
 
     return (
@@ -55,7 +60,7 @@ function BookingForm(props) {
                     <FormControl isInvalid={formik.errors.guests}>
                         <FormLabel htmlFor="guests">Number of guests</FormLabel>
                         <NumberInput min={1} max={10} >
-                            <NumberInputField id="guests" {...formik.getFieldProps("guests")} />
+                            <NumberInputField id="guests" placeholder={1} {...formik.getFieldProps("guests")} />
                             <NumberInputStepper>
                                 <NumberIncrementStepper />
                                 <NumberDecrementStepper />

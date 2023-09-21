@@ -1,16 +1,18 @@
-
 import './App.css';
 import theme from './Components/theme'
 import Header from "./Header"
 import Homepage from "./Homepage";
 import Booking from "./BookingPage";
+import ConfirmedBooking from './ConfirmedBooking';
 import Footer from "./Footer";
 
 import { ChakraProvider } from '@chakra-ui/react';
 import { Box } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 
-import { useState,useReducer } from "react";
+import { useReducer } from "react";
+
+import useSubmit from './Hooks/useSubmit';
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
   }
 
   const [availableTimes,dispatch] = useReducer(slotAdjust,[])
+  const {formResponse,submit} = useSubmit();
 
   return (
     <ChakraProvider theme={theme}>
@@ -29,7 +32,8 @@ function App() {
       <>
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
-        <Route path="/booking" element={<Booking availableTimes={availableTimes} dispatch={dispatch}/>}></Route>
+        <Route path="/booking" element={<Booking availableTimes={availableTimes} dispatch={dispatch} submission={submit}/>}></Route>
+        <Route path="/confirmed-booking" element={<ConfirmedBooking output={formResponse}/>}></Route>
       </Routes>
       </>
       <Footer />
