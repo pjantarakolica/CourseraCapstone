@@ -1,6 +1,5 @@
 import RatingCard from "./RatingCard";
 import FrameComponent from "./FrameComponent"
-import heroshot from "../Assets/HeroShot.jpg";
 
 import { SimpleGrid, Heading, VStack } from "@chakra-ui/react";
 
