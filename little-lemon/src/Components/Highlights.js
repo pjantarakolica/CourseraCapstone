@@ -28,7 +28,7 @@ const menuspecial = [
 
 function Highlights() {
     return (
-            <FrameComponent bgColor="#edefee" py={8}>
+            <FrameComponent bgColor="#edefee" py={8} id="highlights-section">
                 <VStack>
                     <HStack justifyContent="space-between" width="100%" py={4}>
                         <Heading as="h2" size="xl">Weekly Specials!</Heading>

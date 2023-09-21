@@ -8,7 +8,7 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 
 function Hero() {
     return (
-        <FrameComponent bgColor="#495E57">
+        <FrameComponent bgColor="#495E57" id="hero-section">
             <Stack py={16}>
                 <Heading as='h1' size='2xl' color="#f4ce14">Little Lemon</Heading>
                 <Heading as='h2' size='xl' color="#edefee">Chicago</Heading>

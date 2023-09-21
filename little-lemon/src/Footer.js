@@ -1,4 +1,4 @@
-import logo from "./Assets/Logo.svg";
+import logo from "./Assets/FooterLogo.png";
 import Nav from "./Components/Nav";
 
 import { Box, HStack, Stack, Heading, Image, Text,Center} from "@chakra-ui/react";
@@ -17,7 +17,7 @@ function Footer(){
                     justifyContent="space-between"
                     alignItems="top"
                     spacing={16}>
-                        <Image src={logo} alt="logo" />
+                        <Image src={logo} alt="logo" maxWidth="15%" p={2} />
                         <Stack py={16}>
                             <Nav align="Vertical" spacing={0} color="#edefee" alignItems="normal"/>
                         </Stack>
