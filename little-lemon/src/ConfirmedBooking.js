@@ -10,6 +10,8 @@ function ConfirmedBooking(props) {
             <Stack p={4} alignContent="center" color="#edefee">
                 <Heading as="h2" color="#f4ce14">Confirmed Booking</Heading>
                 <Text fontSize="lg">Your booking reservation is confirmed: </Text>
+                <Text fontSize="sm"> Name: {props.output.fullName} </Text>
+                <Text fontSize="sm"> Email: {props.output.email} </Text>
                 <Text fontSize="sm"> Date: {props.output.resDate} </Text>
                 <Text fontSize="sm"> Time: {props.output.resTime} </Text>
                 <Text fontSize="sm"> No. of Guests: {props.output.guests} </Text>

@@ -15,7 +15,7 @@ const menuspecial = [
         price: 5.99,
         description:
             "Our Bruschetta is made from grilled bread that has been smeared with garglic and seasoned with salt and olive oil.",
-        getImageSrc: () => require("../Assets/GreekSalad.jpg")
+        getImageSrc: () => require("../Assets/Bruchetta.png")
     },
     {
         title: "Lemon Cake",

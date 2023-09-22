@@ -7,7 +7,7 @@ const testimonialList = [
     {
         rating: 3,
         profile: "John Doe",
-        getImageSrc: () => require("../Assets/HeroShot.jpg"),
+        getImageSrc: () => require("../Assets/Avatar.jpg"),
         review: "Very Delicious!"
     },
     {
@@ -25,19 +25,19 @@ const testimonialList = [
     {
         rating: 4,
         profile: "Carl Sr.",
-        getImageSrc: () => require("../Assets/HeroShot.jpg"),
+        getImageSrc: () => '',
         review: "Very Homey!"
     },
     {
         rating: 4,
         profile: "James Charl",
-        getImageSrc: () => require("../Assets/HeroShot.jpg"),
+        getImageSrc: () => '',
         review: "Classic!"
     },
     {
         rating: 3,
         profile: "Jay Z",
-        getImageSrc: () => require("../Assets/HeroShot.jpg"),
+        getImageSrc: () => '',
         review: "Very Delicious!"
     }
 ];

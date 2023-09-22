@@ -17,8 +17,8 @@ import useSubmit from './Hooks/useSubmit';
 function App() {
 
   const slotAdjust = (slot, action) => {
-    if (action.type="updateTimes") return ["17:00","18:00","19:00","20:00","21:00","22:00"];
-    if (action.type="initializeTimes") return [];
+    if (action.type === "updateTimes") return ["17:00","18:00","19:00","20:00","21:00","22:00"];
+    if (action.type === "initializeTimes") return [];
   }
 
   const [availableTimes,dispatch] = useReducer(slotAdjust,[])
