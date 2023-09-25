@@ -6,14 +6,14 @@ import FrameComponent from "./FrameComponent"
 
 function About() {
     return (
-        <FrameComponent bgColor="#edefee" p={4} id="about-section">
+        <FrameComponent bgColor="#edefee" p={{base:2,md:4}} id="about-section">
             <Image
                 src={aboutshot}
                 alt="Mario and Adrian"
                 objectFit='cover'
-                maxWidth="60%"
+                maxWidth={{base:"90%",md:"60%"}}
                 borderRadius={16} />
-            <Stack py={16}>
+            <Stack py={{base:2,md:16}}>
                 <Heading as='h2' size='xl' color="#f4ce14">About Little Lemon</Heading>
                 <Heading as='h3' size='lg' color="#333333">Located in Chicago</Heading>
                 <Text size='2xl' color="#495e57">

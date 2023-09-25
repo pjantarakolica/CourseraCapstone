@@ -10,7 +10,7 @@ const Card = ({ title, price, description, image }) => {
       alignItems="normal"
       paddingBottom="5"
       color="black"
-      maxWidth="30%"
+      maxWidth={{base:"80%",md:"30%"}}
     >
       <Image src={image} alt={title} borderRadius="5% 5% 0 0" paddingBottom="3" height="50%"/>
       <HStack padding="5" alignItems="center" justifyContent="space-between">

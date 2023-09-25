@@ -47,7 +47,7 @@ function Testimonials() {
         <FrameComponent bgColor="#495e57" id="testimonials-section">
             <VStack width="100%">
                 <Heading as="h2" size="xl" color="#edefee" p={4}>Testimonials</Heading>
-                <SimpleGrid columns={4} spacing={4} width="100%" paddingBottom={8}>
+                <SimpleGrid columns={{base:2,md:4}} spacing={4} width="100%" paddingBottom={8}>
                     {testimonialList.map((tlist) => (
                         <RatingCard
                             rating={tlist.rating}

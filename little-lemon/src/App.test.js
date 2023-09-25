@@ -1,7 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Testimonials from './Components/Testimonials';
 import BookingPage from './BookingPage';
-import { Routes, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from "./App"
+import { Button } from '@chakra-ui/react';
 
 test('Renders the Testimonial Heading', () => {
   render(<Testimonials />);
@@ -19,8 +21,15 @@ test('Renders the BookingForm heading', () => {
   expect(headingElement).toBeInTheDocument();
 })
 
-// test('Test initializeTimes function', () => {
-//   render(<App />);
-//   dispatch({type:'initializeTimes'});
-//   expect(availableTimes).toBe([]);
-// });
+test('Test initializeTimes function', () => {
+  render(
+    <BrowserRouter>
+    <App />
+    <label for="button1">THIS</label>
+    <Button id="button1" onClick={dispatch({type:'initializeTimes'})} />
+    </BrowserRouter>
+  );
+  const clickButton = screen.getByLabelText('THIS');
+  fireEvent.click(clickButton);
+  expect(availableTimes).toBe([]);
+});

@@ -8,8 +8,8 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 
 function Hero() {
     return (
-        <FrameComponent bgColor="#495E57" id="hero-section">
-            <Stack py={16}>
+        <FrameComponent bgColor="#495E57" id="hero-section" py={16}>
+            <Stack>
                 <Heading as='h1' size='2xl' color="#f4ce14">Little Lemon</Heading>
                 <Heading as='h2' size='xl' color="#edefee">Chicago</Heading>
                 <Text size='2xl' color="#edefee">
@@ -21,7 +21,7 @@ function Hero() {
                 src={heroshot}
                 alt="Chef Curating Dish"
                 objectFit='cover'
-                maxWidth="60%"
+                maxWidth={{base:"100%",md:"60%"}}
                 borderRadius={16} />
         </FrameComponent>
     )

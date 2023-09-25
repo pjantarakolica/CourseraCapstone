@@ -35,7 +35,7 @@ function Highlights() {
                         <Button bg="#f4ce14">Online Menu</Button>
                     </HStack>
 
-                    <Stack direction={['column','row']} justifyContent="space-between">
+                    <Stack direction={{base:"column",md:"row"}} justifyContent="space-between" alignItems={{base:"center",md:"normal"}}>
                     {menuspecial.map((menu) => (
                         <Card
                             title={menu.title}

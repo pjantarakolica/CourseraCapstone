@@ -1,11 +1,15 @@
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink} from '@chakra-ui/react'
-import { HStack,VStack } from "@chakra-ui/react";
+import { HStack,VStack,Stack } from "@chakra-ui/react";
 
 function FormatNav({align,children,...Props}){
     if(align === "Horizontal"){
         return(
             <HStack {...Props}>{children}</HStack>
+        )
+    }else if(align === "Flexible"){
+        return(
+            <Stack direction={{base:"column",sm:"row"}} {...Props}>{children}</Stack>
         )
     }else{
         return(
