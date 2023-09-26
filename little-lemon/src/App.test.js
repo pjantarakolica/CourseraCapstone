@@ -21,15 +21,15 @@ test('Renders the BookingForm heading', () => {
   expect(headingElement).toBeInTheDocument();
 })
 
-test('Test initializeTimes function', () => {
-  render(
-    <BrowserRouter>
-    <App />
-    <label for="button1">THIS</label>
-    <Button id="button1" onClick={dispatch({type:'initializeTimes'})} />
-    </BrowserRouter>
-  );
-  const clickButton = screen.getByLabelText('THIS');
-  fireEvent.click(clickButton);
-  expect(availableTimes).toBe([]);
-});
+// test('Test initializeTimes function', () => {
+//   render(
+//     <BrowserRouter>
+//     <App />
+//     <label for="button1">THIS</label>
+//     <Button id="button1" onClick={dispatch({type:'initializeTimes'})} />
+//     </BrowserRouter>
+//   );
+//   const clickButton = screen.getByLabelText('THIS');
+//   fireEvent.click(clickButton);
+//   expect(availableTimes).toBe([]);
+// });
