@@ -50,6 +50,7 @@ function Testimonials() {
                 <SimpleGrid columns={{base:2,md:4}} spacing={4} width="100%" paddingBottom={8}>
                     {testimonialList.map((tlist) => (
                         <RatingCard
+                            key={tlist.profile}
                             rating={tlist.rating}
                             image={tlist.getImageSrc()}
                             profile={tlist.profile}

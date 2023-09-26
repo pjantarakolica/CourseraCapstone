@@ -38,6 +38,7 @@ function Highlights() {
                     <Stack direction={{base:"column",md:"row"}} justifyContent="space-between" alignItems={{base:"center",md:"normal"}}>
                     {menuspecial.map((menu) => (
                         <Card
+                            key={menu.title}
                             title={menu.title}
                             image={menu.getImageSrc()}
                             price={menu.price}
